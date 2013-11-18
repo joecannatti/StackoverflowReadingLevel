@@ -1,0 +1,6 @@
+*.xml
+*.json
+*.csv
+*.txt
+readability-score
+xa*
