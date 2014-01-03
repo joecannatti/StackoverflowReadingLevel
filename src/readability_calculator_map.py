@@ -53,9 +53,9 @@ for event, elem in context:
     word_count = fk.scores['word_count']
     rows = []
     if len(tags) > 0:
-      results.append((elem.attrib["Id"], word_count, accepted_answer_id, gradeLevel, "|".join(tags), 0))
+      results.append((elem.attrib["Id"], word_count, accepted_answer_id, gradeLevel, "|".join(tags), 0, elem.attrib["CreationDate"]))
     else:
-      results.append((elem.attrib["Id"], word_count, accepted_answer_id, gradeLevel, None, elem.attrib["ParentId"]))
+      results.append((elem.attrib["Id"], word_count, accepted_answer_id, gradeLevel, None, elem.attrib["ParentId"], elem.attrib["CreationDate"]))
     goodRows += 1
   except:
     badRows += 1

@@ -8,6 +8,6 @@ for line in f:
     parts = line.rstrip().split(',')
     tags = parts[4].split('|')
     for tag in tags:
-        writer.writerow(parts[0:4] + [tag] + [parts[5]])
+        writer.writerow(parts[0:4] + [tag] + parts[5:7])
 out.flush()
 out.close()
